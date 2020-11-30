@@ -1,0 +1,35 @@
+
+#Ĭ��ʹ������
+spring:
+  profiles:
+    active: dev
+
+#����mybatis
+mybatis:
+  typeAliasesPackage: com.stopcar.pojo
+  mapperLocations: classpath:mapper/*.xml
+---
+#��������
+spring:
+  profiles:
+    active: dev
+  #jdbc�������ݿ�
+  datasource:
+    url: jdbc:mysql://localhost:3306/ticket_project?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 1714748630
+    driver-class-name: com.mysql.jdbc.Driver
+    # ʹ��druid����Դ
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    open-in-view: false
+  #���Ķ˿ں�
+server:
+  port: 8080
+
+  spring:
+    thymeleaf:
+      prefix: classpath:/templates/
+      mode: html5
+      encoding: utf-8
+      suffix: .html
