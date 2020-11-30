@@ -14,9 +14,9 @@ spring:
     active: dev
   #jdbc连接数据库
   datasource:
-    url: jdbc:mysql://localhost:3306/car?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/ticket_project?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 1766241225
+    password: 176624122
     driver-class-name: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
@@ -24,8 +24,7 @@ spring:
     open-in-view: false
   #更改端口号
 server:
-  port: 80
-
+  port: 8080
   spring:
     thymeleaf:
       prefix: classpath:/templates/
